@@ -9,7 +9,7 @@
     <artifactId>sfdc-canvas-java-template</artifactId>
 
     <properties>
-        <java.version>1.6</java.version>
+        <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -124,8 +124,10 @@
 	              <goal>wsimport</goal>
 	            </goals>
 		        <configuration>
+		       		<verbose>true</verbose>
 		        	<bindingDirectory>src/bindings</bindingDirectory>
-		        	<wsdlDirectory>src/resources</wsdlDirectory>
+		        	<wsdlDirectory>src/main/resources</wsdlDirectory>
+		        	<wsdlLocation>${basedir}/src/main/resources/toolingapi.wsdl</wsdlLocation>
 		        	<xadditionalHeaders>true</xadditionalHeaders>
 		        </configuration>
 	          </execution>
